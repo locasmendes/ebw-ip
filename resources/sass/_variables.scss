@@ -2,6 +2,16 @@
 $body-bg: #f8fafc;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+$font-family-sans-serif: 'Acumin Pro', sans-serif;
+$font-size-base: 1rem;
+
+// Create your own map
+$custom-colors: (
+    "ebw-dark": #2B2B2B,
+    "ebw-golden": #CC883F
+);
+//nav-link colors
+$nav-link-color: white;
+$nav-link-hover-color: #CC883F;
+
+$theme-colors: $custom-colors;
