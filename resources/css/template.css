@@ -52,7 +52,6 @@ footer .input-group .input-group-text.mail-button{
     height: 2rem;
 }
 .navbar{
-    width: 100vw;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(255,255,255,0) 15%, rgb(0 0 0 / 35%) 70%, rgb(0 0 0 / 75%) 100%);
 }

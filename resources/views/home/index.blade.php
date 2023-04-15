@@ -27,7 +27,7 @@
                     </div>
                 </div>
             </section>
-            <section class="how-stuff-works row bg-white text-black justify-content-center text-center py-5">
+            <section class="how-stuff-works row g-0 bg-white text-black justify-content-center text-center py-5">
                 <div class="col-10 col-md-8  flex-column gap-4">
                     <h2>Assessoria Integrativa</h2>
                     <img class="img-fluid" src="{{url('assets/png/calls-specs/hsw.png')}}" alt="">
@@ -39,7 +39,7 @@
             </section>
             <section class="social-proof"></section>
             <section class="second-call bg-white text-black">
-                <div class="row justify-content-center py-5">
+                <div class="row g-0 justify-content-center py-5">
                     <div class="col-8 col-md-5 d-flex flex-column justify-content-evenly">
                         <h2>Invista em quem você ama!</h2>
                         <p>
@@ -56,7 +56,7 @@
                         </div>
                     </div>
                     <div class="col-8 col-md-5 gap-4">
-                        <div class="row">
+                        <div class="row g-0">
                             <div class="col-6">
                                 <img src="{{url('assets/png/second-call/sc1.png')}}" alt="" class="img-fluid ratio" style="--bs-aspect-ratio: 150%;">
                             </div>
