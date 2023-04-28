@@ -15,7 +15,7 @@
     @vite('resources/css/app.css')
 </head>
 <body class="" style="	-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;">
-<div class="" style="min-height: 100vh; background-color: #000000;">
+<div class="main" style="min-height: 100vh; background-color: @yield('main-bg-color','#000000');">
 
     @include('layouts.partials.navbar')
     <!-- Page Content -->

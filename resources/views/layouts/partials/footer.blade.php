@@ -32,11 +32,11 @@
             <div class="row justify-content-between py-9">
                 <div class="col-12 col-md-6">
                     <div>
-                        <h2 class="fw-bold">Agente autônomo da XP Investimentos</h2>
-                        <h2 class="d-inline-flex align-items-center">Ouvidoria XP: <a class="nav-link py-0 pe-0" href="tel:+5508007223710">0800-722-3710</a></h2>
+                        <h4 class="fw-bold">Agente autônomo da XP Investimentos</h4>
+                        <h4 class="d-inline-flex align-items-center">Ouvidoria XP: <a class="nav-link py-0 pe-0" href="tel:+5508007223710">0800-722-3710</a></h4>
                     </div>
                     <div class="contact">
-                        <h2 class="fw-bold">Atendimento</h2>
+                        <h4 class="fw-bold">Atendimento</h4>
                         <a class="nav-link p-0" href="tel:+551127550426">11 2755-0426</a>
                         <a class="nav-link p-0" href="mailto:contato@ebwinvest.com.br">contato@ebwinvest.com.br</a>
                         <span><i></i>de 8h às 18h</span>

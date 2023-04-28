@@ -15,3 +15,13 @@ $nav-link-color: white;
 $nav-link-hover-color: #AC9882;
 
 $theme-colors: $custom-colors;
+
+//faq section accordion variables
+$accordion-color:                         black; // Sass variable because of $accordion-button-icon
+$accordion-button-color:                  $accordion-color;
+$accordion-button-active-color:           black;
+$accordion-icon-color:                    $accordion-button-color;
+$accordion-icon-active-color:             $accordion-button-active-color;
+$accordion-button-active-bg:              inherit;
+$accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='#{$accordion-icon-color}'><path d='M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z'></path></svg>");
+$accordion-button-active-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='#{$accordion-icon-color}'><path d='M5 11V13H19V11H5Z'></path></svg>");

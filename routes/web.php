@@ -16,12 +16,22 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home.index');
 })->name('home');
+
 Route::get('/sobre', function () {
     return view('sobre.index');
 })->name('sobre');
+
 Route::get('/para-voce', function () {
     return view('foryou.index');
 })->name('para-voce');
+
+Route::get('/ajuda', function () {
+    return view('ajuda.index');
+})->name('ajuda');
+
+Route::get('/cadastro', function () {
+    return view('cadastro.index');
+})->name('cadastro');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

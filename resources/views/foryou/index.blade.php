@@ -7,7 +7,7 @@
             </div>
         </header>
         <section class="hero-section bg-white text-black">
-            <div class="row justify-content-center">
+            <div class="row g-0 justify-content-center">
                 <div class="col-10 col-md-7 p-9 text-center">
                     <h2>Invista em você!</h2>
                     <p>
@@ -16,11 +16,11 @@
                 </div>
             </div>
         </section>
-        <section class="products-carousel">
-
+        <section class="options-carousel">
+            <x-for-you.options-slider />
         </section>
         <section class="call-section bg-white text-black">
-            <div class="row justify-content-center">
+            <div class="row g-0 justify-content-center">
                 <div class="col-10 col-md-7 p-9 text-center">
                     <p>
                         Há várias opções de investimento disponíveis para o seu perfil de investimento. Estamos prontos para entregar 100% do nosso conhecimento.
@@ -30,7 +30,7 @@
             </div>
         </section>
         <section class="call-section dark bg-dark text-white">
-            <div class="row justify-content-center">
+            <div class="row g-0 justify-content-center">
                 <div class="col-10 col-md-7 p-9 text-center">
                     <h2 class="py-2">
                         Faça a sua empresa crescer, de forma inteligente.
@@ -68,7 +68,7 @@
                     </div>
                 </div>
                 <div class="col-8 col-md-5 gap-4">
-                    <div class="row justify-content-center g-0">
+                    <div class="row g-0 justify-content-center g-0">
                         <div class="col-6">
                             <img src="{{url('assets/png/for-you/fy3.png')}}" alt="" class="img-fluid ratio" style="--bs-aspect-ratio: 150%;">
                         </div>

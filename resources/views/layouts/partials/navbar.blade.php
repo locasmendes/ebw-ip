@@ -24,13 +24,13 @@
                     <a class="nav-link" href="{{route('para-voce')}}">PARA VOCÊ E PARA SUA EMPRESA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ASSESSORIA INTEGRATIVA</a>
+                    <a class="nav-link" href="{{route('cadastro')}}">ASSESSORIA INTEGRATIVA</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">AJUDA</a>
+                    <a class="nav-link" href="{{route('ajuda')}}">AJUDA</a>
                 </li>
                 <li class="nav-item ps-5">
-                    <a class="p-0 m-0" href="#">
+                    <a class="p-0 m-0" href="{{route('cadastro')}}">
                         <button class="btn btn-ebw-golden rounded-pill text-white btn-nav-call">FALE COM A GENTE</button>
                     </a>
                 </li>
