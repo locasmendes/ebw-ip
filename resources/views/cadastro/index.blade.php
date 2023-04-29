@@ -2,10 +2,12 @@
 @section('main-bg-color','white')
 @section('main')
     <div class="register-page">
-        <header class="page-header py-5 px-5 text-center text-white" style="background: url({{url('assets/png/for-you/for-you.png')}});">
-            <div class="container">
-                <h1>Formulário Cadastral</h1>
-            </div>
+        <header class="page-header" style="background: url({{url('assets/jpg/headers/crm-cc.jpg')}});">
+           <div class="wrapper">
+               <div class="container text-center text-white">
+                   <h1>Formulário Cadastral</h1>
+               </div>
+           </div>
         </header>
         <section class="container">
             <div class="row g-0">

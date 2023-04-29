@@ -10,7 +10,7 @@ class HeroSlider extends Component
 
     public function __construct()
     {
-        $this->slides = [
+        $slides = [
             [
                 'cover' => 'EBW_Invest_home.png',
                 'title' => 'Sua jornada de investimentos começa agora!',
@@ -41,19 +41,17 @@ class HeroSlider extends Component
                 'link' => '#'
             ]
         ];
+
         //transform the array into a collection of objects
-        $this->slides = collect($this->slides);
+        $slides = collect($slides);
         //transform each item of collection to object
-        $this->slides = $this->slides->map(function ($item) {
+        $slides = $slides->map(function ($item) {
             return (object) $item;
         });
+        $this->slides = $slides;
+        //dd($slides, $original);
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     *
-     * @return \Illuminate\Contracts\View\View|\Closure|string
-     */
     public function render()
     {
         return view('components.home.hero-slider');

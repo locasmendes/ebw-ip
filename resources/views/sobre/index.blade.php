@@ -1,9 +1,11 @@
 @extends('layouts.main')
 @section('main')
     <div class="about-page">
-        <header class="page-header py-5 px-5 text-center text-white" style="background: url({{url('assets/png/about/about.png')}});">
-            <div class="container">
-                <h1>Um pouco sobre nós</h1>
+        <header class="page-header" style="background: url({{url('assets/jpg/headers/aboutus.jpg')}});">
+            <div class="wrapper">
+                <div class="container text-center text-white">
+                    <h1>Um pouco sobre nós</h1>
+                </div>
             </div>
         </header>
         <section class="second-call bg-white text-black">

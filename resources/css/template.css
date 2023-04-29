@@ -59,7 +59,7 @@ footer .input-group .input-group-text.mail-button{
     font-size: 0.85rem !important;
 }
 
-.page-header{
+.page-header {
     background-size: cover !important;
     height: 26rem;
     display: flex;
@@ -68,5 +68,18 @@ footer .input-group .input-group-text.mail-button{
     align-content: center;
     justify-content: center;
     align-items: center;
+}
+.page-header .wrapper{
+    height: 100%;
+    width: 100%;
+    background-color: #000000b0;
+    backdrop-filter: contrast(0.5);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
 }
 /*END TEMPLATE*/
