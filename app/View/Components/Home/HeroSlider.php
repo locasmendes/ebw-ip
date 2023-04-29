@@ -43,11 +43,11 @@ class HeroSlider extends Component
         ];
 
         //transform the array into a collection of objects
-        $slides = collect($slides);
+       /* $slides = collect($slides);
         //transform each item of collection to object
         $slides = $slides->map(function ($item) {
             return (object) $item;
-        });
+        });*/
         $this->slides = $slides;
         //dd($slides, $original);
     }
