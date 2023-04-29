@@ -21,3 +21,16 @@ php artisan server
 ``` 
 npm run build
 ```
+
+#### Page Cache
+Esta aplicação utiliza cache de página, através do seguinte [pacote](https://github.com/JosephSilber/page-cache):
+    
+``
+silber/page-cache
+``
+
+Caso haja algum problema com atualização de páginas, execute o comando abaixo:
+
+```
+php artisan page-cache:clear
+```
