@@ -33,6 +33,10 @@ Route::get('/cadastro', function () {
     return view('cadastro.index');
 })->name('cadastro');
 
+Route::get('/debug', function () {
+    return view('debug');
+})->name('debug');
+
 //include dashboard.php routes as a group with prefix /dashboard with auth middleware
 Route::prefix('dashboard')->middleware(['auth'])->group(function () {
     require __DIR__.'/dashboard.php';

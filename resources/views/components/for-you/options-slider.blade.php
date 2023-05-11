@@ -1,18 +1,52 @@
 <div class="options-slider carousel slide" id="optionsCarousel" data-bs-ride="true" data-bs-touch="true">
-    <div class="carousel-inner">
-        @for($i = 0; $i < count($chunks); $i++)
-            <div class="option-chunk carousel-item slide {{$i === 0 ? 'active' : ''}}">
-                @foreach($chunks[$i] as $option)
-                    <div class="option-item">
-                        <span>{{$option}}</span>
-                    </div>
-                @endforeach
+    <div class="owl-carousel" id="optionsSlider">
+        @foreach($options as $option)
+            <div class="option-item">
+                <span>{{$option}}</span>
             </div>
-        @endfor
-    </div>
-    <div class="carousel-indicators py-3">
-        @for($i = 0; $i < count($chunks); $i++)
-            <button type="button" data-bs-target="#optionsCarousel" data-bs-slide-to="{{$i}}" class="{{$i === 0 ? 'active' : ''}}" aria-current="{{$i === 0 ? 'true' : 'false'}}" aria-label="Slide {{$i}}"></button>
-        @endfor
+        @endforeach
     </div>
 </div>
+@push('scripts')
+    <script>
+        const options = {
+            items: 2,
+            loop: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            dots: true,
+            nav: false,
+            responsive: {
+                0: {
+                    items: 2,
+                    dots: true,
+                    nav: false,
+                },
+                576: {
+                    items: 3,
+                    dots: true,
+                    nav: false,
+                },
+                768: {
+                    items: 4,
+                    dots: true,
+                    nav: false,
+                },
+                992: {
+                    items: 4,
+                    dots: true,
+                    nav: false,
+                },
+                1200: {
+                    items: 4,
+                    dots: true,
+                    nav: false,
+                }
+            },
+        }
+        $(function() {
+            $("#optionsSlider").owlCarousel(options);
+        });
+    </script>
+@endpush

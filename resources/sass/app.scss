@@ -10,8 +10,12 @@
 @import 'foryou-page';
 @import 'help';
 
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@import 'buttons';
+// import bootstrap utilities
+@import 'utilities';
 //import bootstrap icons
 @font-face {
     font-family: 'bootstrap-icons';
@@ -23,3 +27,5 @@
 
 // Importe os estilos
 @import '~bootstrap-icons/font/bootstrap-icons';
+
+

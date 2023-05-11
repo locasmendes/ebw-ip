@@ -2,8 +2,12 @@
     <div class="card-header">
         <div class="img-container" style="background: url({{$img}})">
             <div class="social-media">
-                <a href="" class="btn btn-social-media rounded-circle"><x-ri-linkedin-fill /></a>
-                <a href="" class="btn btn-social-media rounded-circle"><x-ri-twitter-fill /></a>
+                @if($socialNetworks['linkedin'])
+                    <a href="{{$socialNetworks['linkedin']}}" class="btn btn-social-media rounded-circle" target="_blank"><x-ri-linkedin-fill /></a>
+                @endif
+                @if($socialNetworks['twitter'])
+                    <a href="{{$socialNetworks['twitter']}}" class="btn btn-social-media rounded-circle" target="_blank"><x-ri-twitter-fill /></a>
+                @endif
             </div>
         </div>
     </div>

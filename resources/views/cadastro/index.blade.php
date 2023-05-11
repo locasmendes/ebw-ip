@@ -11,7 +11,7 @@
         </header>
         <section class="container">
             <div class="row g-0">
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-md-6 py-5">
                     <x-forms.register />
                 </div>
                 <div class="col-12 col-md-6"></div>

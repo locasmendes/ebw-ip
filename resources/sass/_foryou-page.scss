@@ -1,5 +1,8 @@
 .options-carousel{
     .options-slider{
+        .owl-dots{
+            background-color: white;
+        }
         .carousel-indicators {
             display: flex;
             position: relative !important;
@@ -26,9 +29,9 @@
                 align-items: center;
             }
         }
-        .option-chunk {
+        .owl-stage {
             height: 12rem;
-            .option-item {
+            .owl-item {
                 color: white;
                 height: 100%;
                 width: 25%;
@@ -41,11 +44,11 @@
                 font-size: 1.5rem;
             }
 
-            .option-item:nth-child(even) {
+            .owl-item:nth-child(even) {
                 background-color: #2B2B2B;
             }
 
-            .option-item:nth-child(odd) {
+            .owl-item:nth-child(odd) {
                 background-color: #ABABAB;
             }
         }

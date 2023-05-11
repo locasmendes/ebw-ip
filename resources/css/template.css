@@ -29,7 +29,7 @@
 .footer-menu-links a{
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 footer .contact{
     display: flex;
@@ -52,11 +52,16 @@ footer .input-group .input-group-text.mail-button{
     height: 2rem;
 }
 .navbar{
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(255,255,255,0) 15%, rgb(0 0 0 / 35%) 70%, rgb(0 0 0 / 75%) 100%);
+    /*background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(255,255,255,0) 15%, rgb(0 0 0 / 35%) 70%, rgb(0 0 0 / 75%) 100%);*/
+}
+.navbar .navbar-brand img{
+    max-width: 50%;
+    height: auto;
 }
 .navbar a.nav-link, .btn-nav-call {
     font-size: 0.85rem !important;
+    white-space: nowrap;
 }
 
 .page-header {

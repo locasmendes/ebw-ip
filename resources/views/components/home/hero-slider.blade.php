@@ -8,10 +8,14 @@
         <div class="carousel-inner">
             @foreach($slides as $slide)
                 <div class="carousel-item slide {{$loop->first ? 'active' : ''}}" style="background: url({{asset('assets/png/slider/'.$slide['cover'])}});">
-                    <div class="slide-content">
-                        <h1>{{$slide['title']}}</h1>
-                        <p>{{$slide['description']}}</p>
-                        <a href="{{$slide['link']}}" class="btn border-ebw-golden rounded-pill text-white">{{$slide['call_to_action']}} >>></a>
+                    <div class="slide-content w-100">
+                        <div class="slide-heading w-md-50">
+                            <h1>{{$slide['title']}}</h1>
+                        </div>
+                        <div class="slide-body w-md-30">
+                            <p>{{$slide['description']}}</p>
+                            <a href="{{$slide['link']}}" class="btn border-ebw-golden text-white cta-btn">{{$slide['call_to_action']}} >>></a>
+                        </div>
                     </div>
                 </div>
             @endforeach

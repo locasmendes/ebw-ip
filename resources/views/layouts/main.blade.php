@@ -13,6 +13,9 @@
     <!-- Scripts -->
     @vite('resources/js/app.js')
     @vite('resources/css/app.css')
+    <script src="{{url('js/jquery-3.6.4.min.js')}}" type="text/javascript"></script>
+    @vite('resources/plugins/owl/css/owl.carousel.css')
+    @vite('resources/plugins/owl/js/owl.carousel.min.js')
 </head>
 <body class="" style="	-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;">
 <div class="main" style="min-height: 100vh; background-color: @yield('main-bg-color','#000000');">
@@ -24,5 +27,6 @@
     </main>
 </div>
 @include('layouts.partials.footer')
+@stack('scripts')
 </body>
 </html>
