@@ -1,5 +1,5 @@
 <div>
-    <div class="clean-heading text-center pt-5 pb-9">
+    <div class="clean-heading text-center px-3 px-md-0 pt-5 pb-9">
         <h1>Diferente do tradicional</h1>
         <h4>Veja o que nossos investidores falam sobre nós.</h4>
     </div>
@@ -27,7 +27,7 @@
                 @endforelse
             </div>
     </div>
-    <div class="clean-heading text-center py-9">
+    <div class="clean-heading text-center py-9 px-3">
         <p class="fs-4 fw-lighter">O seu futuro e o futuro do seu patrimônio é você quem decide.</p>
         <a class="btn cta-btn border-ebw-golden text-black mt-4" href="">Conquiste suas metas financeiras >>></a>
     </div>
