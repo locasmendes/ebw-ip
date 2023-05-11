@@ -1,4 +1,28 @@
 @extends('layouts.main')
+@push('scripts')
+    <script>
+        const videoSection = document.querySelector('#video-section');
+        const myVideo = document.querySelector('#my-video');
+
+        let options = {
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        let callback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    myVideo.play();
+                } else {
+                    myVideo.pause();
+                }
+            });
+        };
+
+        let observer = new IntersectionObserver(callback, options);
+        observer.observe(videoSection);
+    </script>
+@endpush
 @section('main')
     <div class="home-page">
         <div class="d-flex flex-column">
@@ -27,10 +51,12 @@
                     </div>
                 </div>
             </section>
-            <section class="how-stuff-works row g-0 bg-white text-black justify-content-center text-center py-5">
-                <div class="col-10 col-md-8  flex-column gap-4">
+            <section class="how-stuff-works row g-0 bg-white text-black justify-content-center text-center py-5" id="video-section">
+                <div class="col-12 col-md-8  flex-column gap-4">
                     <h2 class="fs-1">Assessoria Integrativa</h2>
-                    <img class="img-fluid" src="{{url('assets/png/calls-specs/hsw.png')}}" alt="">
+                    <video id="my-video" class="w-100" muted style="aspect-ratio: 1/1; object-fit: cover; max-width: 992px;">
+                        <source src="{{ asset('assets/video/ai.webm') }}" type="video/webm">
+                    </video>
                     <img role="img" src="{{ asset('assets/svg/chevron-down.svg') }}" width="24">
                 </div>
             </section>

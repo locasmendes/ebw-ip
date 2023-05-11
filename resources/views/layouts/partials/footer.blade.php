@@ -12,7 +12,7 @@
                         </div>
                     </div>
 
-                    <div class="sn-container gap-4 d-flex align-items-center w-auto">
+                    <div class="sn-container gap-4 d-flex align-items-center w-100 w-md-auto justify-content-center">
                         <a href="https://www.facebook.com/ebwinvest" target="_blank">
                             <img role="img" class="" src="{{ asset('assets/svg/fb-icon.svg') }}" width="24">
                         </a>

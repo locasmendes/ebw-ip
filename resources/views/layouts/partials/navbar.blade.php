@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-xl bg-light px-md-5">
+<nav class="navbar navbar-expand-xl bg-black px-md-5">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img role="img" src="{{ asset('assets/svg/ebw-invest-color.svg') }}">
