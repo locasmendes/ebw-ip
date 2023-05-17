@@ -14,7 +14,7 @@
                         </div>
 
                         @if(array_key_exists('overlay', $slide))
-                            <div class="slide-overlay w-60">
+                            <div class="slide-overlay pe-4 pe-md-0 w-md-60">
                                 <figure class="figure">
                                     <img src="{{asset('assets/png/slider/'.$slide['overlay']['url'])}}" class="figure-img img-fluid rounded" alt="...">
                                     <figcaption class="figure-caption text-white text-center">{{$slide['overlay']['caption']}}</figcaption>
