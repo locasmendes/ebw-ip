@@ -22,7 +22,7 @@
                         <a class="nav-link" href="{{route('para-voce')}}">PARA VOCÊ E PARA SUA EMPRESA</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('cadastro')}}">ASSESSORIA INTEGRATIVA</a>
+                        <a class="nav-link" href="{{request()->routeIs('home') ? '#assessoria-integrativa' :route('home').'#assessoria-integrativa'}}">ASSESSORIA INTEGRATIVA</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('ajuda')}}">AJUDA</a>
