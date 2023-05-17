@@ -12,6 +12,16 @@
                         <div class="slide-heading w-md-50">
                             <h1>{{$slide['title']}}</h1>
                         </div>
+
+                        @if(array_key_exists('overlay', $slide))
+                            <div class="slide-overlay w-60">
+                                <figure class="figure">
+                                    <img src="{{asset('assets/png/slider/'.$slide['overlay']['url'])}}" class="figure-img img-fluid rounded" alt="...">
+                                    <figcaption class="figure-caption text-white text-center">{{$slide['overlay']['caption']}}</figcaption>
+                                </figure>
+                            </div>
+                        @endif
+
                         <div class="slide-body w-md-30">
                             <p>{{$slide['description']}}</p>
                             <a href="{{$slide['link']}}" class="btn border-ebw-golden text-white cta-btn">{{$slide['call_to_action']}} >>></a>

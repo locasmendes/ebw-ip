@@ -34,7 +34,8 @@ class HeroSlider extends Component
                 'link' => '#'
             ],
             [
-                'cover' => 'EBW_4.png',
+                'cover' => 'ebw-4.jpg',
+                'overlay' => ['url' => 'overlay.png', 'caption' => 'Conquistas'],
                 'title' => 'EBW Invest',
                 'description' => "Aqui sua assessoria é personalizada, porque para nós você é único.",
                 'call_to_action' => 'Fale com o time da EBW Invest',

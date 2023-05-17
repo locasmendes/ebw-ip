@@ -52,9 +52,9 @@
                 </div>
             </section>
             <section class="how-stuff-works row g-0 bg-white text-black justify-content-center text-center py-5" id="video-section">
-                <div class="col-12 col-md-8  flex-column gap-4">
+                <div class="col-12 col-md-8 d-flex flex-column flex-nowrap justify-content-center align-items-center gap-4">
                     <h2 class="fs-1">Assessoria Integrativa</h2>
-                    <video id="my-video" class="w-100" muted style="aspect-ratio: 1/1; object-fit: cover; max-width: 992px;">
+                    <video id="my-video" class="" muted style="aspect-ratio: 1/1; object-fit: cover;">
                         <source src="{{ asset('assets/video/ai.webm') }}" type="video/webm">
                     </video>
                     <img role="img" src="{{ asset('assets/svg/chevron-down.svg') }}" width="24">
