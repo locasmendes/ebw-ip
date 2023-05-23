@@ -16,7 +16,7 @@ class HeroSlider extends Component
                 'title' => 'Sua jornada de investimentos começa agora!',
                 'description' => "Nós pensamos no seu futuro, enquanto você vive o presente.",
                 'call_to_action' => 'Abra sua conta',
-                'link' => '#'
+                'link' => route('cadastro')
             ],
             [
                 'cover' => 'EBW_2.png',
@@ -24,14 +24,14 @@ class HeroSlider extends Component
                 'description' => "Quando o assunto é investimento, não há fórmulas prontas.
                 \n Atue de maneira mais ativa nas decisões do seu futuro e seu patrimônio",
                 'call_to_action' => 'Atinja suas metas financeiras',
-                'link' => '#'
+                'link' => route('cadastro')
             ],
             [
                 'cover' => 'EBW_3.png',
                 'title' => 'Invista com isenção de Imposto de Renda.',
                 'description' => "Há vários investimentos que são isentos de recolhimento de impostos.",
                 'call_to_action' => 'Saiba como investir',
-                'link' => '#'
+                'link' => route('cadastro')
             ],
             [
                 'cover' => 'ebw-4.jpg',
@@ -39,7 +39,7 @@ class HeroSlider extends Component
                 'title' => 'EBW Invest',
                 'description' => "Aqui sua assessoria é personalizada, porque para nós você é único.",
                 'call_to_action' => 'Fale com o time da EBW Invest',
-                'link' => '#'
+                'link' => route('cadastro')
             ]
         ];
 

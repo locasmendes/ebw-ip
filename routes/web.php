@@ -37,6 +37,14 @@ Route::get('/debug', function () {
     return view('debug');
 })->name('debug');
 
+Route::get('/politica-de-privacidade', function (){
+   return view('policy.privacy');
+})->name('politica-de-privacidade');
+
+Route::get('/termos-de-uso', function (){
+    return view('policy.terms');
+})->name('termos-de-uso');
+
 //include dashboard.php routes as a group with prefix /dashboard with auth middleware
 Route::prefix('dashboard')->middleware(['auth'])->group(function () {
     require __DIR__.'/dashboard.php';

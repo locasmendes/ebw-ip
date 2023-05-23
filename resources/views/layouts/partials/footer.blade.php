@@ -62,6 +62,14 @@
                             <img role="img" class="" src="{{ asset('assets/svg/envelope.svg') }}" width="32">
                         </button>
                     </div>
+                    <div class="row">
+                        <div class="col">
+                            <a class="nav-link text-ebw-golden" href="{{route('politica-de-privacidade')}}" style="font-size: medium;">Política de Privacidade</a>
+                        </div>
+                        <div class="col">
+                            <a class="nav-link text-ebw-golden" href="{{route('termos-de-uso')}}" style="font-size: medium;">Termos de Uso</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

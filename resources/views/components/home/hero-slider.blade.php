@@ -24,6 +24,9 @@
 
                         <div class="slide-body w-md-30">
                             <p>{{$slide['description']}}</p>
+                        </div>
+
+                        <div class="slide-footer w-md-30">
                             <a href="{{$slide['link']}}" class="btn border-ebw-golden text-white cta-btn">{{$slide['call_to_action']}} >>></a>
                         </div>
                     </div>

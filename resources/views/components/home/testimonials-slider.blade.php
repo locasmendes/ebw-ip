@@ -29,7 +29,7 @@
     </div>
     <div class="clean-heading text-center py-9 px-3">
         <p class="fs-4 fw-lighter">O seu futuro e o futuro do seu patrimônio é você quem decide.</p>
-        <a class="btn cta-btn border-ebw-golden text-black mt-4" href="">Conquiste suas metas financeiras >>></a>
+        <a class="btn cta-btn border-ebw-golden text-black mt-4" href="{{route('cadastro')}}">Conquiste suas metas financeiras >>></a>
     </div>
 </div>
 @push('scripts')

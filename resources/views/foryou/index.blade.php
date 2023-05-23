@@ -27,7 +27,7 @@
                     <p>
                         Há várias opções de investimento disponíveis para o seu perfil de investimento. Estamos prontos para entregar 100% do nosso conhecimento.
                     </p>
-                    <a href="#" class="btn border-ebw-golden text-black cta-btn">Comece agora a sua jornada >>></a>
+                    <a href="{{route('cadastro')}}" class="btn border-ebw-golden text-black cta-btn">Comece agora a sua jornada >>></a>
                 </div>
             </div>
         </section>
@@ -57,7 +57,7 @@
                         </p>
                     </div>
                     <div>
-                        <a href="#" class="btn py-2 border-ebw-golden text-white cta-btn">Agende seu horário com a nossa equipe>>></a>
+                        <a href="{{route('cadastro')}}" class="btn py-2 border-ebw-golden text-white cta-btn">Agende seu horário com a nossa equipe>>></a>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@
                         Diversifique sua carteira de investimentos.
                     </p>
                     <div>
-                        <a href="" class="btn border-ebw-golden cta-btn">Conheça as opções >>></a>
+                        <a href="{{route('cadastro')}}" class="btn border-ebw-golden cta-btn">Conheça as opções >>></a>
                     </div>
                 </div>
                 <div class="d-none d-md-block col-10 col-md-5 gap-4">

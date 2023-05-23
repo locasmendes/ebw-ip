@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div>
-                        <a href="" class="btn border-ebw-golden cta-btn">Conheça nossa equipe >>></a>
+                        <a href="{{route('cadastro')}}" class="btn border-ebw-golden cta-btn">Conheça nossa equipe >>></a>
                     </div>
                 </div>
             </div>

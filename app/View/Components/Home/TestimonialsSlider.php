@@ -14,41 +14,23 @@ class TestimonialsSlider extends Component
     {
         $testimonials = [
             [
-                'name' => 'Roberto Williams',
-                'profile_photo' => url('assets/jpg/testimonials/i4.jpg'),
-                'company' => 'Empresa X',
-                'testimonial' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.'
+                'name' => 'Claudio J C França',
+                'profile_photo' => url('assets/jpg/testimonials/testimonial1.jpg'),
+                'company' => 'Slow Juice',
+                'testimonial' => 'Atendimento de excelência assessoria voltada única e exclusivamente para o cliente superou nossas expectativas, recomendo 110%.'
             ],
             [
-                'name' => 'Dan Torres',
-                'profile_photo' => url('assets/jpg/testimonials/i3.jpg'),
-                'company' => 'Empresa Y',
-                'testimonial' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.'
+                'name' => 'Osvaldo Paiva',
+                'profile_photo' => url('assets/jpg/testimonials/testimonial2.jpg'),
+                'company' => 'EVORA GROUP',
+                'testimonial' => 'A Marisa é uma profissional diferenciada. Por estar em linha ao mercado brasileiro assim como o internacional, suas análises e orientações nos propícia sempre muita segurança, assertividade e sensatez atrelado a ótimos resultados em nossa carteira que está sob sua gestão. É o equilíbrio ideal entre o cuidado e performance.'
             ],
             [
-                'name' => 'Evelyn Martinez',
-                'profile_photo' => url('assets/jpg/testimonials/i5.jpg'),
-                'company' => 'Empresa Z',
-                'testimonial' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.'
-            ],
-            [
-                'name' => 'Roberto Torres',
-                'profile_photo' => url('assets/jpg/testimonials/i4.jpg'),
-                'company' => 'Empresa X',
-                'testimonial' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.'
-            ],
-            [
-                'name' => 'Dan Martinez',
-                'profile_photo' => url('assets/jpg/testimonials/i3.jpg'),
-                'company' => 'Empresa Y',
-                'testimonial' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.'
-            ],
-            [
-                'name' => 'Evelyn Williams',
-                'profile_photo' => url('assets/jpg/testimonials/i5.jpg'),
-                'company' => 'Empresa Z',
-                'testimonial' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor.'
-            ],
+                'name' => 'Júlia Araújo Zaccaria',
+                'profile_photo' => url('assets/jpg/testimonials/testimonial3.jpg'),
+                'company' => 'JVZ Holding',
+                'testimonial' => 'Excelente profissional e muito comprometida. Procura entender as minhas necessidades, adequando e ajustando ao meu perfil de investidor. Sempre procura equilibrar riscos e resultados me dando tranquilidade sobre o capital investido.'
+            ]
         ];
 
         $chunks = array_chunk($testimonials, 3);

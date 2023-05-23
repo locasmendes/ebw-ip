@@ -41,6 +41,9 @@
             .profile{
                 .avatar{
                     object-fit: cover;
+                    img{
+                        aspect-ratio: 1/1;
+                    }
                 }
                 h4{
                     font-weight: bold;
