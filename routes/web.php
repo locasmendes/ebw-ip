@@ -33,6 +33,10 @@ Route::get('/cadastro', function () {
     return view('cadastro.index');
 })->name('cadastro');
 
+Route::get('trabalhe-conosco', function () {
+    return view('talents.index');
+})->name('trabalhe-conosco');
+
 Route::get('/debug', function () {
     return view('debug');
 })->name('debug');

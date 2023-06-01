@@ -80,7 +80,7 @@
                             <mark>Diversifique</mark> sua carteira de investimentos.
                         </p>
                         <div>
-                            <a href="" class="btn border-ebw-golden text-white cta-btn">Conheça as opções >>></a>
+                            <a href="{{route('cadastro')}}" class="btn border-ebw-golden text-white cta-btn">Conheça as opções >>></a>
                         </div>
                     </div>
                     <div class="d-none d-md-block col-8 col-md-5 gap-4">

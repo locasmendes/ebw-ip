@@ -4,7 +4,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <x-ri-menu-line class="text-ebw-golden"/>
             </button>
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="{{route('home')}}">
                 <img role="img" src="{{ asset('assets/svg/ebw-invest-color.svg') }}">
                 <img role="img" src="{{ asset('assets/svg/xp-agent-color.svg') }}">
             </a>
