@@ -49,7 +49,7 @@
                             <li><a class="nav-link" href="{{route('home')}}">HOME</a></li>
                             <li><a class="nav-link" href="{{route('sobre')}}">SOBRE</a></li>
                             <li><a class="nav-link" href="{{route('para-voce')}}">SERVIÇOS</a></li>
-                            <li><a class="nav-link" href="{{route('ajuda')}}">TRABALHE CONOSCO</a></li>
+                            <li><a class="nav-link" href="{{route('trabalhe-conosco')}}">TRABALHE CONOSCO</a></li>
                         </ul>
                     </div>
                 </div>
