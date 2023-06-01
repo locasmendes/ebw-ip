@@ -44,6 +44,7 @@
                     object-fit: cover;
                     img{
                         aspect-ratio: 1/1;
+                        object-fit: cover;
                     }
                 }
                 h4{
@@ -96,7 +97,7 @@
                 .carousel-item {
                     height: 100%;
                     display: flex;
-                    padding-left: 5rem;
+                    padding-left: 10rem;
                     background-size: cover !important;
                     @media (max-width: 768px) {
                         padding-left: 2rem;

@@ -18,6 +18,7 @@
     <script src="{{url('js/owl/owl.carousel.min.js')}}" type="text/javascript"></script>
     {{--@vite('resources/plugins/owl/css/owl.carousel.css')
     @vite('resources/plugins/owl/js/owl.carousel.min.js')--}}
+    @include('layouts.partials.trackers', ['gtm_id' => 'GTM-TESTE', 'fb_id' => 'TESTE'])
 </head>
 <body class="" style="	-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;">
 <div class="main" style="min-height: 100vh; background-color: @yield('main-bg-color','#000000');">

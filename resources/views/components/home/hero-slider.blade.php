@@ -1,8 +1,8 @@
 <div class="hero-carousel-slider">
-    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="true" data-bs-touch="true">
+    <div id="heroSliderCarousel" class="carousel slide carousel-fade" data-bs-ride="true" data-bs-touch="true">
         <div class="carousel-indicators">
             @for($i = 0; $i < count($slides); $i++)
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="{{$i}}" class="{{$i === 0 ? 'active' : ''}}" aria-current="{{$i === 0 ? 'true' : 'false'}}" aria-label="Slide {{$i}}"></button>
+                <button type="button" data-bs-target="#heroSliderCarousel" data-bs-slide-to="{{$i}}" class="{{$i === 0 ? 'active' : ''}}" aria-current="{{$i === 0 ? 'true' : 'false'}}" aria-label="Slide {{$i}}"></button>
             @endfor
         </div>
         <div class="carousel-inner">
@@ -44,5 +44,13 @@
                 </div>
             @endfor--}}
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroSliderCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroSliderCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 </div>
