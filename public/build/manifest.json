@@ -1,0 +1,19 @@
+{
+  "resources/js/app.js": {
+    "file": "assets/app.aace24b9.js",
+    "src": "resources/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app.cb213c7b.css"
+    ],
+    "assets": [
+      "assets/bootstrap-icons.cfe45b98.woff2",
+      "assets/bootstrap-icons.999550fa.woff"
+    ]
+  },
+  "resources/css/app.css": {
+    "file": "assets/app.abc5ca10.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  }
+}
