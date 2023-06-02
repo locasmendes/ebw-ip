@@ -8,9 +8,10 @@ class HeroSlider extends Component
 {
     public mixed $slides;
 
-    public function __construct()
+    public function __construct($carousel)
     {
-        $slides = [
+        $slides = [];
+        /*$slides = [
             [
                 'cover' => 'EBW_Invest_home.webp',
                 'title' => 'Sua jornada de investimentos começa agora!',
@@ -41,16 +42,13 @@ class HeroSlider extends Component
                 'call_to_action' => 'Fale com o time da EBW Invest',
                 'link' => route('cadastro')
             ]
-        ];
+        ];*/
+        foreach ($carousel as $item) {
+            //transform the object into an array recursively
+            $slides[] = json_decode(json_encode($item), true);
+        }
 
-        //transform the array into a collection of objects
-       /* $slides = collect($slides);
-        //transform each item of collection to object
-        $slides = $slides->map(function ($item) {
-            return (object) $item;
-        });*/
         $this->slides = $slides;
-        //dd($slides, $original);
     }
 
     public function render()

@@ -74,10 +74,17 @@
             </div>
         </div>
 
-        <div>
+        <div class="d-inline-flex justify-content-center text-center">
             <small>
                 <p class="text-center" style="color: #ffffff8c;">Copyright © EBW Invest 2023. Todos os direitos reservados.</p>
             </small>
+            @auth
+                <small class="px-5">
+                    <p>
+                        <a class="" href="{{route('dashboard')}}">Dashboard</a>
+                    </p>
+                </small>
+            @endauth
         </div>
     </div>
 </footer>

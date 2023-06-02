@@ -17,12 +17,53 @@
 <body class="" style="	-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;">
 <div class="main" style="min-height: 100vh; background-color: @yield('main-bg-color','#000000');">
 
-@include('layouts.partials.navbar')
+@include('layouts.partials.navbar-dashboard')
 <!-- Page Content -->
     <main>
-        @yield('main')
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3">
+                    <aside>
+                        <div class="flex-shrink-0 p-3 bg-white">
+                            <a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+                                <span class="fs-5 fw-semibold">Dashboard</span>
+                            </a>
+                            <ul class="list-unstyled ps-0">
+                                <li class="mb-1">
+                                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                                        Páginas
+                                    </button>
+                                    <div class="collapse" id="home-collapse" style="">
+                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                            <li><a href="{{route('dashboard.pages.home')}}" class="link-dark rounded">Home</a></li>
+                                            <li><a href="#" class="link-dark rounded">Sobre nós</a></li>
+                                            <li><a href="#" class="link-dark rounded">Pra você</a></li>
+                                            <li><a href="#" class="link-dark rounded">Ajuda</a></li>
+                                            <li><a href="#" class="link-dark rounded">Trabalhe conosco</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li class="mb-1">
+                                    <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                                        Tráfego/SEO
+                                    </button>
+                                    <div class="collapse" id="dashboard-collapse">
+                                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                                            <li><a href="#" class="link-dark rounded">Meta Tags</a></li>
+                                            <li><a href="#" class="link-dark rounded">Pixel/GTM</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+                <div class="col-9">
+                    @yield('main')
+                </div>
+            </div>
+        </div>
     </main>
 </div>
-@include('layouts.partials.footer')
 </body>
 </html>

@@ -27,24 +27,24 @@
     <div class="home-page">
         <div class="d-flex flex-column">
             <section class="hero-section">
-                <x-home.hero-slider />
+                <x-home.hero-slider :carousel="$content->carousel"/>
             </section>
             <section class="transition-section pb-5 pe-3 pe-md-5 ps-3 ps-md-5 pt-7 bg-white text-black">
                 <div class="container text-center">
-                    <p class="fs-4">Um portfólio completo para você investir, de acordo com o seu perfil e sua meta financeira.</p>
+                    <p class="fs-4">{{$content->faixa1}}</p>
                     <img role="img" src="{{ asset('assets/svg/chevron-down.svg') }}" width="24">
                 </div>
             </section>
             <section class="hero-calls d-flex flex-column flex-md-row justify-content-evenly text-white p-5 gap-4 gap-md-0" style="background: url({{url('assets/png/calls-specs/EBW2.png')}});">
                 <div class="d-flex flex-column align-self-center align-self-md-auto flex-nowrap justify-content-end align-items-center col-12 col-md-3 gap-4">
-                    <h2>Faça seu patrimônio crescer</h2>
+                    <h2>{{$content->faixa2->texto}}</h2>
                     <img class="img-fluid" src="{{url('assets/png/calls-specs/p1.png')}}" alt="">
                     <div>
                         <a href="{{route('cadastro')}}" class="btn border-ebw-golden text-white cta-btn">Saiba como investir >>></a>
                     </div>
                 </div>
                 <div class="d-flex flex-column align-self-center align-self-md-auto flex-nowrap justify-content-end align-items-center col-12 col-md-3 gap-4">
-                    <h2>Invista na sua empresa</h2>
+                    <h2>{{$content->faixa2->texto2}}</h2>
                     <img class="img-fluid" src="{{url('assets/png/calls-specs/p2.png')}}" alt="">
                     <div>
                         <a href="{{route('cadastro')}}" class="btn border-ebw-golden text-white cta-btn">Conheça as opções >>></a>
@@ -61,7 +61,7 @@
                 </div>
             </section>
             <section class="social-proof bg-white">
-                <x-home.testimonials-slider />
+                <x-home.testimonials-slider :testimonials="$content->depoimentos" />
             </section>
             <section class="second-call bg-black text-white" id="home_page_second_call">
                 <div class="row g-0 justify-content-center wrapper py-5">

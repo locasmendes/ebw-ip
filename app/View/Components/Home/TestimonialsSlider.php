@@ -10,9 +10,13 @@ class TestimonialsSlider extends Component
     public array $testimonials = [];
     public array $chunks = [];
 
-    public function __construct()
+    public function __construct($testimonials)
     {
-        $testimonials = [
+        foreach ($testimonials as $key => $testimonial) {
+            //transform to array recursively
+            $testimonials[$key] = json_decode(json_encode($testimonial), true);
+        }
+        /*$testimonials = [
             [
                 'name' => 'Claudio J C França',
                 'profile_photo' => url('assets/jpg/testimonials/testimonial1.jpg'),
@@ -31,7 +35,7 @@ class TestimonialsSlider extends Component
                 'company' => 'JVZ Holding',
                 'testimonial' => 'Excelente profissional e muito comprometida. Procura entender as minhas necessidades, adequando e ajustando ao meu perfil de investidor. Sempre procura equilibrar riscos e resultados me dando tranquilidade sobre o capital investido.'
             ]
-        ];
+        ];*/
 
         $chunks = array_chunk($testimonials, 3);
 
