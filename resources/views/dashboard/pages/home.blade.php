@@ -8,7 +8,20 @@
                     <h2>Página Home</h2>
                 </header>
                 <hr>
-                <form class="py-5">
+                <form action="{{ route('dashboard.pages.home.save') }}" method="post" class="py-5">
+                    <!-- Success Message -->
+                    @if(session('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <strong>Sucesso!</strong> {{session('success')}}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @elseif(session('error'))
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <strong>Erro!</strong> {{session('error')}}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    @endif
+                    @csrf
                     <section>
                         <h3>Carrossel</h3>
                         @foreach($content->carousel as $key => $slide)

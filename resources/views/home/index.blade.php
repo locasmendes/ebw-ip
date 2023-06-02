@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.main', ['pageTitle' => 'Home'])
 @push('scripts')
     <script>
         const videoSection = document.querySelector('#video-section');

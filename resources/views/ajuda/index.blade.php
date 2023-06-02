@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.main', ['pageTitle' => 'Ajuda'])
 @section('main-bg-color','white')
 @section('main')
     <div class="help-page">

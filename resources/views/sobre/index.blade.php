@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.main', ['pageTitle' => 'Sobre nós'])
 @section('main')
     <div class="about-page">
         <header class="page-header" style="background: url({{url('assets/jpg/headers/aboutus.jpg')}});">

@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
+    @php
+        $pageTitle = $pageTitle ?? '';
+    @endphp
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <x-layout.meta-data :page="$pageTitle"/>
 
     <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
@@ -18,7 +21,7 @@
     <script src="{{url('js/owl/owl.carousel.min.js')}}" type="text/javascript"></script>
     {{--@vite('resources/plugins/owl/css/owl.carousel.css')
     @vite('resources/plugins/owl/js/owl.carousel.min.js')--}}
-    @include('layouts.partials.trackers', ['gtm_id' => 'GTM-TESTE', 'fb_id' => 'TESTE'])
+
 </head>
 <body class="" style="	-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;">
 <div class="main" style="min-height: 100vh; background-color: @yield('main-bg-color','#000000');">

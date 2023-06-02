@@ -49,8 +49,7 @@
                                     </button>
                                     <div class="collapse" id="dashboard-collapse">
                                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                                            <li><a href="#" class="link-dark rounded">Meta Tags</a></li>
-                                            <li><a href="#" class="link-dark rounded">Pixel/GTM</a></li>
+                                            <li><a href="{{route('dashboard.pages.seo')}}" class="link-dark rounded">Dados de SEO/Tags</a></li>
                                         </ul>
                                     </div>
                                 </li>

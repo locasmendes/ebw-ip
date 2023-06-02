@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.main', ['pageTitle' => 'Política de privacidade'])
 @section('main-bg-color','white')
 @section('main')
     <div class="container py-md-8 py-4">

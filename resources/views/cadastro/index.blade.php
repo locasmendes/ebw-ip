@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.main', ['pageTitle' => 'Cadastro'])
 @section('main-bg-color','white')
 @section('main')
     <div class="register-page">

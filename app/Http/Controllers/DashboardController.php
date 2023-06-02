@@ -85,7 +85,74 @@ class DashboardController extends Controller
         dd($homePage->content);*/
         $page = Page::where('slug', 'home')->first();
         $content = json_decode($page->content);
+
         $attributes = array_keys(get_object_vars($content));
         return view('dashboard.pages.home', ['slug' => $page->slug, 'content' => $content, 'attributes' => $attributes]);
     }
+
+    public function saveHomePage(Request $request)
+    {
+        try {
+            $page = Page::where('slug', 'home')->first();
+            $content = json_decode($page->content);
+            //format Slides
+            $keys_start_with_slide = array_filter(array_keys($request->all()), function ($key) {
+                return strpos($key, 'slide') === 0;
+            });
+            $slides = [];
+            foreach ($keys_start_with_slide as $key) {
+                //transform the $key in the following structure example: slide-1-title => slide[0]['title'] = $request->input($key)
+                $elements = explode('_', $key);
+                $slide_key = $elements[1];
+                $slide_attribute = $elements[2];
+                $slides[$slide_key][$slide_attribute] = $request->input($key);
+            }
+            foreach ($slides as $key => $slide){
+                $slides[$key] = (object) $slide;
+                if ($slides[$key]->cover === 'ebw-4.webp'){
+                    $slides[$key]->overlay = (object) ['url' => 'overlay.png', 'caption' => 'Conquistas'];
+                }
+                $slides[$key]->call_to_action = $slides[$key]->call;
+                unset($slides[$key]->call);
+            }
+
+            $content->carousel = $slides;
+            $content->faixa1 = $request->input('faixa1');
+            $content->faixa2 = new \stdClass();
+            $content->faixa2->texto = $request->input('faixa2_texto');
+            $content->faixa2->texto2 = $request->input('faixa2_texto2');
+            $page->content = json_encode($content);
+            $page->save();
+            return redirect()->route('dashboard.pages.home')->with('success', 'Página salva com sucesso!');
+        } catch (\Exception $e) {
+            return redirect()->route('dashboard.pages.home')->with('error', 'Erro ao salvar página!');
+        }
+    }
+
+    // SEO
+    public function editSeoPage()
+    {
+        $page = Page::where('slug', 'seo')->first();
+        $content = json_decode($page->content);
+        $attributes = array_keys(get_object_vars($content));
+        return view('dashboard.pages.seo', ['slug' => $page->slug, 'content' => $content, 'attributes' => $attributes]);
+    }
+
+    public function saveSeoPage(Request $request)
+    {
+        try {
+            $page = Page::where('slug', 'seo')->first();
+            $content = json_decode($page->content);
+            $content->title = $request->input('title');
+            $content->description = $request->input('description');
+            $content->gtm_id = $request->input('gtm_id');
+            $content->fb_id = $request->input('fb_id');
+            $page->content = json_encode($content);
+            $page->save();
+            return redirect()->route('dashboard.pages.seo')->with('success', 'Página salva com sucesso!');
+        } catch (\Exception $e) {
+            return redirect()->route('dashboard.pages.seo')->with('error', 'Erro ao salvar página!');
+        }
+    }
+
 }

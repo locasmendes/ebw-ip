@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.main', ['pageTitle' => 'Para você e sua empresa'])
 @section('main')
     <div class="for-you-page">
         <header class="page-header" style="background: url({{url('assets/png/for-you/for-you.png')}});">

@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.main', ['pageTitle' => 'Trabalhe conosco'])
 @section('main')
     <div class="jobs-page">
         <header class="page-header" style="background: url({{url('assets/webp/tc.webp')}});">

@@ -11,6 +11,6 @@ class PageController extends Controller
     {
         $page = Page::where('slug', 'home')->first();
         $content = json_decode($page->content);
-        return view('home.index', compact('content'));
+        return view('home.index', ['content' => $content, $pageTitle = 'Home']);
     }
 }
