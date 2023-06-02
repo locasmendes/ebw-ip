@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Page;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
+    // HOME PAGE
     public function editHomePage()
     {
         /*
@@ -155,4 +158,33 @@ class DashboardController extends Controller
         }
     }
 
+    // FAQ
+    public function editFaqPage()
+    {
+        $faqItems = DB::table('faq')->get();
+        return view('dashboard.pages.faq', ['faqItems' => $faqItems]);
+    }
+
+    public function saveFaqPage(Request $request)
+    {
+        $data = $request->all();
+        unset($data['_token']);
+        try {
+            foreach ($data as $key => $item){
+                $element = explode('_', $key);
+                $id = $element[2];
+                $attribute = $element[1];
+                $value = $item;
+                if ($attribute == 'visibility'){
+                    $attribute = 'is_active';
+                }
+                DB::table('faq')->where('id', $id)->update([$attribute => $value]);
+            }
+            //TODO: tratar itens adicionados com o prefixo new e os itens já existentes com o prefixo old
+            Artisan::call('page-cache:clear');
+            return redirect()->route('dashboard.pages.faq')->with('success', 'Página salva com sucesso!');
+        } catch (\Exception $e) {
+            return redirect()->route('dashboard.pages.faq')->with('error', 'Erro ao salvar página!'.$e->getMessage());
+        }
+    }
 }
