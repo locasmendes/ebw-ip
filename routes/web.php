@@ -31,6 +31,8 @@ Route::get('/cadastro', function () {
     return view('cadastro.index');
 })->name('cadastro');
 
+Route::post('/cadastro', [\App\Http\Controllers\PageController::class, 'cadastrar'])->name('cadastro.save');
+
 Route::get('trabalhe-conosco', function () {
     return view('talents.index');
 })->name('trabalhe-conosco');

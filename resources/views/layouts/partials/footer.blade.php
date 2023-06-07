@@ -54,7 +54,7 @@
                     </div>
                 </div>
                 <div class="col-12 col-md-4 text-center">
-                    <h6 class="fw-bold">Deixe sua dúvida!</h6>
+                    <h6 class="fw-bold">Deixe sua mensagem!</h6>
                     <p>Nossa equipe está pronta para atender você.</p>
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" placeholder="Seu melhor email" aria-label="Seu melhor email" aria-describedby="basic-addon2">

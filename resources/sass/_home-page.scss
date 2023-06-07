@@ -24,6 +24,10 @@
     }
     .hero-calls{
         text-align: center;
+        .img-fluid {
+            aspect-ratio: 4/5;
+            object-fit: fill;
+        }
     }
     .social-proof{
         .clean-heading{

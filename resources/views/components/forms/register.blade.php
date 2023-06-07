@@ -1,4 +1,5 @@
-<form class="p-5" style="background-color: #F2F2F2; border-radius: 1.6rem;">
+<form class="p-5" style="background-color: #F2F2F2; border-radius: 1.6rem;" method="post" action="{{ route('cadastro.save') }}">
+    @csrf
     <h3>Preencha o formulário abaixo com os seus dados!</h3>
     @foreach($fields as $field)
         @include('components.forms.fields.'.$field['type'], ['field' => $field, 'form_id' => $formId])

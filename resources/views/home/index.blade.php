@@ -13,6 +13,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     myVideo.play();
+                    myVideo.currentTime = 6;
                 } else {
                     myVideo.pause();
                 }
@@ -38,14 +39,14 @@
             <section class="hero-calls d-flex flex-column flex-md-row justify-content-evenly text-white p-5 gap-4 gap-md-0" style="background: url({{url('assets/png/calls-specs/EBW2.png')}});">
                 <div class="d-flex flex-column align-self-center align-self-md-auto flex-nowrap justify-content-end align-items-center col-12 col-md-3 gap-4">
                     <h2>{{$content->faixa2->texto}}</h2>
-                    <img class="img-fluid" src="{{url('assets/png/calls-specs/p1.png')}}" alt="">
+                    <img class="img-fluid" src="{{url('assets/webp/Faca_seu_Patrimonio_crescer.webp')}}" alt="">
                     <div>
                         <a href="{{route('cadastro')}}" class="btn border-ebw-golden text-white cta-btn">Saiba como investir >>></a>
                     </div>
                 </div>
                 <div class="d-flex flex-column align-self-center align-self-md-auto flex-nowrap justify-content-end align-items-center col-12 col-md-3 gap-4">
                     <h2>{{$content->faixa2->texto2}}</h2>
-                    <img class="img-fluid" src="{{url('assets/png/calls-specs/p2.png')}}" alt="">
+                    <img class="img-fluid" src="{{url('assets/webp/Invista_na_sua_Empresa.webp')}}" alt="">
                     <div>
                         <a href="{{route('cadastro')}}" class="btn border-ebw-golden text-white cta-btn">Conheça as opções >>></a>
                     </div>
@@ -54,7 +55,7 @@
             <section class="how-stuff-works row g-0 bg-white text-black justify-content-center text-center py-5" id="video-section">
                 <div class="col-12 col-md-8 d-flex flex-column flex-nowrap justify-content-center align-items-center gap-4">
                     <h2 class="fs-1">Assessoria Integrativa</h2>
-                    <video id="assessoria-integrativa" class="" muted style="aspect-ratio: 1/1; object-fit: cover;bottom: 1rem;    position: relative;">
+                    <video id="assessoria-integrativa" class="" muted style="object-fit: cover;bottom: 1rem;    position: relative;">
                         <source src="{{ asset('assets/video/ai.webm') }}" type="video/webm">
                     </video>
                     <img role="img" src="{{ asset('assets/svg/chevron-down.svg') }}" width="24">
