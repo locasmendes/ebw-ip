@@ -12,7 +12,15 @@
         <section class="container">
             <div class="row g-0">
                 <div class="col-12 col-md-6 py-5">
-                    <x-forms.register />
+                    @if(session()->has('success'))
+                        <div class="alert alert-success border text-center">
+                            <p><x-ri-check-line color="green"/></p>
+                            <p><strong>{{session()->get('success')}}</strong></p>
+                            <p>Entraremos em contato o mais breve possível.</p>
+                        </div>
+                    @else
+                        <x-forms.register />
+                    @endif
                 </div>
                 <div class="col-12 col-md-6"></div>
             </div>

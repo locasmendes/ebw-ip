@@ -17,7 +17,9 @@ class PageController extends Controller
 
     public function cadastrar(Request $request)
     {
+        //sanitize request->phone
         $request->validate([
+            'captcha' => 'hiddencaptcha',
             'name' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
@@ -30,12 +32,12 @@ class PageController extends Controller
 
         $params->name = $request->name;
         $params->email = $request->email;
-        $params->mobile = $request->phone;
+        $params->mobile = str_replace([' ', '(', ')', '-'], '', $request->phone);
         $params->profession = $request->profession;
         $params->age = $request->age;
         $params->value = $request->value;
-        $params->whatsappOptIn = 'yes';
-        $params->emailOptIn = 'yes';
+        $params->whatsappOptIn = $request->whatsappOptIn;
+        $params->emailOptIn = $request->emailOptIn;
         $params->rulerId = Utils::getRulerId();
 
         //transform $params to array
@@ -53,8 +55,7 @@ class PageController extends Controller
         ]);
 
         $response = json_decode($response->getBody()->getContents());
-        dd($response);
 
-        return redirect()->route('cadastro');
+        return redirect()->route('cadastro')->with('success', 'Seu cadastro foi realizado com sucesso!');
     }
 }

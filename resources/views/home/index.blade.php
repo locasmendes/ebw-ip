@@ -13,7 +13,7 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     myVideo.play();
-                    myVideo.currentTime = 6;
+                    myVideo.currentTime = 1;
                 } else {
                     myVideo.pause();
                 }
@@ -55,7 +55,7 @@
             <section class="how-stuff-works row g-0 bg-white text-black justify-content-center text-center py-5" id="video-section">
                 <div class="col-12 col-md-8 d-flex flex-column flex-nowrap justify-content-center align-items-center gap-4">
                     <h2 class="fs-1">Assessoria Integrativa</h2>
-                    <video id="assessoria-integrativa" class="" muted style="object-fit: cover;bottom: 1rem;    position: relative;">
+                    <video preload="none" id="assessoria-integrativa" class="" muted style="object-fit: cover;bottom: 1rem;    position: relative;">
                         <source src="{{ asset('assets/video/ai.webm') }}" type="video/webm">
                     </video>
                     <img role="img" src="{{ asset('assets/svg/chevron-down.svg') }}" width="24">

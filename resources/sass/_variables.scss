@@ -25,3 +25,8 @@ $accordion-icon-active-color:             $accordion-button-active-color;
 $accordion-button-active-bg:              inherit;
 $accordion-button-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='#{$accordion-icon-color}'><path d='M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z'></path></svg>");
 $accordion-button-active-icon:         url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='#{$accordion-icon-color}'><path d='M5 11V13H19V11H5Z'></path></svg>");
+$form-check-input-checked-bg-color:       #CC883F;
+$input-focus-border-color:               #dca876;
+$form-check-input-focus-border:        1px solid #dca876;
+$input-btn-focus-box-shadow:           0 0 0 0.2rem rgba(222, 126, 24, 0.25);
+$form-check-input-focus-box-shadow:  0 0 0 0.2rem rgba(222, 126, 24, 0.25);

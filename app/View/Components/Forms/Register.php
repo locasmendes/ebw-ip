@@ -32,7 +32,7 @@ class Register extends Component
                 'name' => 'phone',
                 'label' => 'Telefone',
                 'type' => 'text',
-                'placeholder' => 'Telefone',
+                'placeholder' => 'Telefone (com DDD)',
                 'required' => true,
             ],
             [
@@ -45,7 +45,9 @@ class Register extends Component
             [
                 'name' => 'age',
                 'label' => 'Idade',
-                'type' => 'text',
+                'type' => 'number',
+                'min' => '18',
+                'max' => '120',
                 'placeholder' => 'Idade',
                 'required' => true,
             ],

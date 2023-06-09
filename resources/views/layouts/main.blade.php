@@ -33,6 +33,10 @@
     </main>
 </div>
 @include('layouts.partials.footer')
+<script src="{{url('js/cookies.js')}}"></script>
+<script>
+    avisoCookiesEBW({})
+</script>
 @stack('scripts')
 </body>
 </html>
