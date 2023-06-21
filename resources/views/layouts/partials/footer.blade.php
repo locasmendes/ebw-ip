@@ -37,9 +37,10 @@
                     </div>
                     <div class="contact">
                         <h6 class="fw-bold">Atendimento</h6>
-                        <a class="nav-link p-0" href="tel:+551127550426">11 2755-0426</a>
+                        <a class="nav-link p-0" href="tel:+08007223730">0800–722–3730</a>
                         <a class="nav-link p-0" href="mailto:contato@ebwinvest.com.br">contato@ebwinvest.com.br</a>
-                        <span><i></i>de 8h às 18h</span>
+                        <span>De segunda a sexta-feira</span>
+                        <span><i></i>das 8h às 18h</span>
                     </div>
                 </div>
                 <div class="col-12 col-md-2">
@@ -74,9 +75,13 @@
             </div>
         </div>
 
-        <div class="d-inline-flex justify-content-center text-center">
-            <small>
-                <p class="text-center" style="color: #ffffff8c;">Copyright © EBW Invest 2023. Todos os direitos reservados.</p>
+        <div class="d-flex flex-md-row flex-column justify-content-center text-center">
+            <small class="text-center" style="font-size: 9px;color: #ffffff8c;">
+                <p>
+                    EBW invest – Agente Autônomo de Investimentos Ltda é uma empresa de agentes autônomos de investimento devidamente registrada na Comissão de Valores Mobiliários (CVM), na forma da Resolução CVM nº 178/2023.
+                    EBW invest Agente Autônomo de Investimentos Ltda atua no mercado financeiro credenciada à XP Investimentos CCTVM S/A, Agente Autônomo de Investimentos.
+                    Para reclamações, favor contatar a Ouvidoria da XP Investimentos no telefone nº 0800–722–3730
+                </p>
             </small>
             @auth
                 <small class="px-5">

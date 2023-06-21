@@ -75,7 +75,7 @@
                             É para quem faz o <mark>futuro acontecer</mark>.
                         </p>
                         <p class="fs-5 fw-lighter">
-                            Para investir a longo prazo com <mark>rentabilidade e baixo risco</mark> é preciso inteligência.
+                            Para investir a longo prazo com <mark>rentabilidade e baixo risco</mark>, é preciso inteligência.
                         </p>
                         <p class="fs-5 fw-lighter">
                             <mark>Diversifique</mark> sua carteira de investimentos.

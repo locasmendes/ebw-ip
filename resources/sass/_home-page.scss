@@ -19,6 +19,7 @@
                 font-weight: bold;
                 color: var(--bs-ebw-golden);
                 background-color: unset;
+                padding: 0;
             }
         }
     }
@@ -26,7 +27,7 @@
         text-align: center;
         .img-fluid {
             aspect-ratio: 4/5;
-            object-fit: fill;
+            object-fit: contain;
         }
     }
     .social-proof{

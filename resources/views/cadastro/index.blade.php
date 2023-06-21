@@ -5,7 +5,7 @@
         <header class="page-header" style="background: url({{url('assets/jpg/headers/crm-cc.jpg')}});">
            <div class="wrapper">
                <div class="container text-center text-white">
-                   <h1>Formulário Cadastral</h1>
+                   <h1>Cadastre-se para ter um atendimento personalizado</h1>
                </div>
            </div>
         </header>
@@ -16,7 +16,7 @@
                         <div class="alert alert-success border text-center">
                             <p><x-ri-check-line color="green"/></p>
                             <p><strong>{{session()->get('success')}}</strong></p>
-                            <p>Entraremos em contato o mais breve possível.</p>
+                            <p>Fique tranquilo. Em breve, nosso time entra em contato com você.</p>
                         </div>
                     @else
                         <x-forms.register />
