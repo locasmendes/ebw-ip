@@ -39,14 +39,14 @@
             <section class="hero-calls d-flex flex-column flex-md-row justify-content-evenly text-white p-5 gap-4 gap-md-0" style="background: url({{url('assets/png/calls-specs/EBW2.png')}});">
                 <div class="d-flex flex-column align-self-center align-self-md-auto flex-nowrap justify-content-end align-items-center col-12 col-md-3 gap-4">
                     <h2>{{$content->faixa2->texto}}</h2>
-                    <img class="img-fluid" src="{{url('assets/webp/Faca_seu_Patrimonio_crescer.webp')}}" alt="">
+                    <img class="img-fluid" src="{{url('assets/webp/hc1.webp')}}" alt="">
                     <div>
                         <a href="{{route('cadastro')}}" class="btn border-ebw-golden text-white cta-btn">Saiba como investir >>></a>
                     </div>
                 </div>
                 <div class="d-flex flex-column align-self-center align-self-md-auto flex-nowrap justify-content-end align-items-center col-12 col-md-3 gap-4">
                     <h2>{{$content->faixa2->texto2}}</h2>
-                    <img class="img-fluid" src="{{url('assets/webp/Invista_na_sua_Empresa.webp')}}" alt="">
+                    <img class="img-fluid" src="{{url('assets/webp/hc2.webp')}}" alt="">
                     <div>
                         <a href="{{route('cadastro')}}" class="btn border-ebw-golden text-white cta-btn">Conheça as opções >>></a>
                     </div>
