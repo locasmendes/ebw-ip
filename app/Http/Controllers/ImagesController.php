@@ -19,18 +19,16 @@ class ImagesController
         // Cria uma instância da imagem usando o pacote Intervention Image
         $image = Image::make(storage_path("app/public/{$imagePath}"));
 
-        // Otimiza a imagem para o formato .webp
-        $image->encode('webp');
-        //rename file extension to webp
-        $originalPath = $imagePath;
-        $imagePath = str_replace(".jpg", ".webp", $imagePath);
+        $imageExtension = $image->extension;
+        if ($imageExtension !== 'webp'){
+            $image->encode('webp');
+            $originalPath = $imagePath;
+            $imagePath = str_replace($imageExtension, ".webp", $imagePath);
+            $webp = (string) $image;
+            file_put_contents(storage_path("app/public/{$imagePath}"), $webp);
+            Storage::delete($originalPath);
+        }
 
-        $webp = (string) $image;
-        file_put_contents(storage_path("app/public/{$imagePath}"), $webp);
-
-        // Delete original image
-        Storage::delete($originalPath);
-        // Obtém a URL da imagem otimizada
         $imageUrl = Storage::url($imagePath);
 
         return response()->json(['url' => $imageUrl], 201);
