@@ -21,5 +21,10 @@
             <p class="fw-bolder">Paragraph text fw-bolder</p>
             <p class="fw-black">Paragraph text fw-black</p>
         </div>
+        <form enctype="multipart/form-data" class="container bg-white" action="{{route('images.upload')}}" method="post">
+            @csrf
+            <input type="file" name="image" id="image">
+            <button type="submit">Enviar</button>
+        </form>
     </div>
 @endsection
