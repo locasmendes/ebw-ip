@@ -20,8 +20,16 @@ class ImagesController
         $image = Image::make(storage_path("app/public/{$imagePath}"));
 
         // Otimiza a imagem para o formato .webp
-        $image->encode('webp')->save();
+        $image->encode('webp');
+        //rename file extension to webp
+        $originalPath = $imagePath;
+        $imagePath = str_replace(".jpg", ".webp", $imagePath);
 
+        $webp = (string) $image;
+        file_put_contents(storage_path("app/public/{$imagePath}"), $webp);
+
+        // Delete original image
+        Storage::delete($originalPath);
         // Obtém a URL da imagem otimizada
         $imageUrl = Storage::url($imagePath);
 
