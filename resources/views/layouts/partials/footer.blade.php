@@ -8,7 +8,7 @@
                             <img role="img" class="img-fluid" src="{{ asset('assets/svg/ebw-invest-logo.svg') }}">
                         </div>
                         <div class="xp-brand">
-                            <img role="img" class="img-fluid" src="{{ asset('assets/svg/xp-agent-logo.svg') }}">
+                            <img role="img" class="img-fluid" src="{{ asset('assets/png/xp_a_b.png') }}" width="200" height="47">
                         </div>
                     </div>
 

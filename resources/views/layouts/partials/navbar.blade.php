@@ -6,7 +6,7 @@
             </button>
             <a class="navbar-brand" href="{{route('home')}}">
                 <img role="img" src="{{ asset('assets/svg/ebw-invest-color.svg') }}">
-                <img role="img" src="{{ asset('assets/svg/xp-agent-color.svg') }}">
+                <img role="img" src="{{ asset('assets/png/xp_a_e.png') }}">
             </a>
         </div>
         <div class="w-100 w-md-auto">
