@@ -37,7 +37,7 @@
                                     <div class="collapse" id="home-collapse" style="">
                                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
                                             <li><a href="{{route('dashboard.pages.home')}}" class="link-dark rounded">Home</a></li>
-                                            <li><a href="#" class="link-dark rounded" disabled>Sobre nós</a></li>
+                                            <li><a href="{{route('dashboard.pages.about')}}" class="link-dark rounded" disabled>Sobre nós</a></li>
                                             <li><a href="#" class="link-dark rounded" disabled>Pra você</a></li>
                                             <li><a href="{{ route('dashboard.pages.faq') }}" class="link-dark rounded">Ajuda</a></li>
                                             <li><a href="#" class="link-dark rounded" disabled>Trabalhe conosco</a></li>

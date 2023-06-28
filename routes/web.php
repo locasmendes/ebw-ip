@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\PageController::class, 'home'])->name('home');
 
-Route::get('/sobre', function () {
-    return view('sobre.index');
-})->name('sobre');
+Route::get('/sobre', [\App\Http\Controllers\PageController::class, 'about'])->name('sobre');
 
 Route::get('/para-voce', function () {
     return view('foryou.index');

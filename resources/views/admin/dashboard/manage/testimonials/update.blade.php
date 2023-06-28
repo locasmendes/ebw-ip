@@ -15,7 +15,7 @@
                             @if(!in_array($field['type'], ['file', 'image']))
                                 <label for="updatemodal-{{$field['name']}}">{{ $field['label'] }}</label>
                                 <input type="{{ $field['type'] }}" class="form-control" id="updatemodal-{{$field['name']}}" placeholder="{{ $field['label'] }}" wire:model="{{ $field['name'] }}">
-                           @endif
+                            @endif
                             @error($field['name']) <span class="text-danger">{{ $message }}</span>@enderror
                         </div>
                     @endforeach

@@ -25,6 +25,12 @@ class PageController extends Controller
         );
     }
 
+    public function about()
+    {
+        $directors = \App\Models\Director::all();
+        return view('sobre.index', ['directors' => $directors]);
+    }
+
     public function cadastrar(Request $request)
     {
         //sanitize request->phone

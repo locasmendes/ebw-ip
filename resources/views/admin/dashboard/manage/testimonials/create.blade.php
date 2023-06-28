@@ -1,3 +1,4 @@
+<!-- Button trigger modal align at end -->
 <div class="row d-flex flex-row-reverse">
     <div class="col-3">
         <button type="button" class="btn btn-primary btn-ebw-dark text-white" data-bs-toggle="modal" data-bs-target="#create{{$id}}">
@@ -5,6 +6,7 @@
         </button>
     </div>
 </div>
+
 <!-- Modal -->
 <div wire:ignore.self class="modal fade" id="create{{$id}}" tabindex="-1" role="dialog" aria-labelledby="create{{$id}}Label" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -21,7 +23,7 @@
                                 <label for="{{$field['name']}}">{{ $field['label'] }}</label>
                                 <input type="{{ $field['type'] }}" class="form-control" id="{{$field['name']}}" placeholder="{{ $field['label'] }}" wire:model="{{ $field['name'] }}">
                             @endif
-                         </div>
+                        </div>
                     @endforeach
                 </form>
             </div>

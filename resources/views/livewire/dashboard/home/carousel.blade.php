@@ -37,8 +37,8 @@
                     </td>
                     <td>{{ $value->overlay_caption }}</td>
                     <td>
-                        <button type="button" data-bs-toggle="modal" data-bs-target="#updateModal" wire:click="edit({{ $value->id }})" class="btn btn-primary btn-sm">Editar</button>
-                        <button wire:click="delete({{ $value->id }})" class="btn btn-danger btn-sm">Deletar</button>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#update{{'HeroSlide'}}Modal" wire:click="edit({{ $value->id }})" class="btn btn-primary btn-sm">Editar</button>
+                        <button type="button" wire:click="delete({{ $value->id }})" class="btn btn-danger btn-sm">Deletar</button>
                     </td>
                 </tr>
             @endforeach

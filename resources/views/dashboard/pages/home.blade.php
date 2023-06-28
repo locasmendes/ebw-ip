@@ -22,12 +22,20 @@
                         </div>
                     @endif
                     @csrf
+                    <hr>
                     <section>
                         <h3>Carrossel</h3>
-                        <livewire:dashboard.home.carousel :carousels="$heroSlides" />
+                        <livewire:dashboard.home.carousel />
                     </section>
                     <hr>
                     <section>
+                        <h3>Depoimentos</h3>
+                        <livewire:dashboard.home.testimonials />
+                    </section>
+                    <hr>
+                    <section>
+                        <h3>Outras seções</h3>
+                        <hr>
                         <fieldset class="my-2 p-4 border rounded-3">
                             <legend>Seção 1</legend>
                             <div class="mb-3 row">
@@ -37,8 +45,6 @@
                                 </div>
                             </div>
                         </fieldset>
-                    </section>
-                    <section>
                         <fieldset class="my-2 p-4 border rounded-3">
                             <legend>Seção 2</legend>
                             <div class="mb-3 row">
@@ -54,11 +60,10 @@
                                 </div>
                             </div>
                         </fieldset>
+                        <div class="py-3">
+                            <button type="submit" class="btn cta-btn border-ebw-dark text-black">Salvar</button>
+                        </div>
                     </section>
-                    <section>
-                        <livewire:dashboard.home.testimonials :testimonials="$content->depoimentos" />
-                    </section>
-                    <button type="submit" class="btn cta-btn border-ebw-dark text-black">Salvar</button>
                 </form>
             </div>
         </div>

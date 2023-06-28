@@ -1,40 +1,37 @@
 <div>
-    <fieldset class="my-2 p-4 border rounded-3">
-        <legend>Depoimentos</legend>
-        {{--
-        <div class="mb-3 row">
-            <label for="testimonial_show_photos" class="col-sm-2 col-form-label">Mostrar fotos?</label>
-            <div class="col-sm-10">
-                <input type="checkbox" class="form-check-input" id="testimonial_show_photos"
-                       name="testimonial_show_photos" {{$showPhotos?'checked':''}}>
-            </div>
+    @include('admin.dashboard.manage.testimonials.create', ['id' => 'Testimonial', 'title' => 'Criar Depoimento' , 'fields' => $fields])
+    @include('admin.dashboard.manage.testimonials.update', ['id' => 'Testimonial', 'title' => 'Editar Depoimento' , 'fields' => $fields])
+    @if(session()->has('message'))
+        <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+            {{session('message')}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
-        --}}
-        @forelse($testimonials as $testimonial)
-            <div class="mb-3 row">
-                <label for="testimonial_name_{{$loop->index}}" class="col-sm-2 col-form-label">Nome</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="testimonial_name_{{$loop->index}}" name="testimonial_name_{{$loop->index}}" value="{{$testimonial->name}}">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <span>Foto</span>
-                <livewire:upload-photo :name="'testimonial_profile_photo_'.$loop->index" :url="$testimonial->profile_photo"/>
-            </div>
-            <div class="mb-3 row">
-                <label for="testimonial_company_{{$loop->index}}" class="col-sm-2 col-form-label">Empresa</label>
-                <div class="col-sm-10">
-                    <input type="text" class="form-control" id="testimonial_company_{{$loop->index}}" name="testimonial_company_{{$loop->index}}" value="{{$testimonial->company}}">
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="testimonial_testimonial_{{$loop->index}}" class="col-sm-2 col-form-label">Depoimento</label>
-                <div class="col-sm-10">
-                    <textarea class="form-control" id="testimonial_testimonial_{{$loop->index}}" name="testimonial_testimonial_{{$loop->index}}" rows="3">{{$testimonial->testimonial}}</textarea>
-                </div>
-            </div>
-        @empty
-        @endforelse
-    </fieldset>
-
+    @endif
+    <table class="table table-bordered mt-5">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Empresa</th>
+                <th>Depoimento</th>
+                <th>Foto</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach($testimonials as $value)
+                <tr>
+                    <td>{{$value->id}}</td>
+                    <td>{{$value->name}}</td>
+                    <td>{{$value->company}}</td>
+                    <td>{{$value->testimonial}}</td>
+                    <td><img src="{{$value->profile_photo}}" alt="{{$value->name}}" width="100"></td>
+                    <td>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#update{{'Testimonial'}}Modal" wire:click="edit({{$value->id}})" class="btn btn-primary btn-sm">Editar</button>
+                        <button type="button" wire:click="delete({{$value->id}})" class="btn btn-danger btn-sm">Deletar</button>
+                    </td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 </div>

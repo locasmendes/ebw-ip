@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Director;
 use App\Models\HeroSlide;
 use App\Models\Page;
 use App\Models\Testimonial;
@@ -89,17 +90,13 @@ class DashboardController extends Controller
         $homePage->save();
         dd($homePage->content);*/
         $page = Page::where('slug', 'home')->first();
-        $heroSlides = HeroSlide::all();
-        $testimonials = Testimonial::all();
         $content = json_decode($page->content);
 
         $attributes = array_keys(get_object_vars($content));
         return view('dashboard.pages.home', [
             'slug' => $page->slug,
             'content' => $content,
-            'attributes' => $attributes,
-            'heroSlides' => $heroSlides,
-            'testimonials' => $testimonials
+            'attributes' => $attributes
         ]
         );
     }
@@ -233,5 +230,15 @@ class DashboardController extends Controller
         } catch (\Exception $e) {
             return redirect()->route('dashboard.pages.faq')->with('error', 'Erro ao salvar página!'.$e->getMessage());
         }
+    }
+
+    public function editAboutPage()
+    {
+        return view('dashboard.pages.about');
+    }
+
+    public function saveAboutPage()
+    {
+        dd('saveAboutPage');
     }
 }

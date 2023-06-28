@@ -109,45 +109,22 @@
                 <h2>Conheça nossos sócios fundadores</h2>
             </div>
             <div class="person-wrapper">
-                @include('components.elements.person-card', [
-                    'fullName' => 'Marcelo Siqueira',
-                    'position' => 'Sócio Fundador',
-                    'description' => '30 anos de mercado, Profissional CFP®.',
-                    'quote' => '“Revolucionar o mercado com a nossa metodologia”',
-                    'img' => url('assets/jpg/socios/ms.jpg'),
-                    'socialNetworks' => [
-                        'linkedin' => 'https://www.linkedin.com/in/marcelo-siqueira-cfp%C2%AE-194bb923/',
-                        'instagram' => '',
-                        'facebook' => '',
-                        'twitter' => ''
-]
-                ])
-                @include('components.elements.person-card', [
-                    'fullName' => 'Victor Saad',
-                    'position' => 'Sócio Fundador',
-                    'description' => '20 anos atuando no segmento de customer success',
-                    'quote' => '“Descomplicando o mercado financeiro com jeito fácil e inovador de investir”',
-                    'img' => url('assets/jpg/socios/vs.jpg'),
-                    'socialNetworks' => [
-                        'linkedin' => 'https://www.linkedin.com/in/victor-saad-4b513327/',
-                        'instagram' => '',
-                        'facebook' => '',
-                        'twitter' => ''
-]
-                ])
-                @include('components.elements.person-card', [
-                    'fullName' => 'Marisa Simião',
-                    'position' => 'Sócia Fundadora',
-                    'description' => 'Expertise de 35 anos de mercado',
-                    'quote' => '“Transformando sonhos em realidade”',
-                    'img' => url('assets/jpg/socios/mas.jpg'),
-                    'socialNetworks' => [
-                        'linkedin' => 'https://www.linkedin.com/in/marisasimi%C3%A3o/',
-                        'instagram' => '',
-                        'facebook' => '',
-                        'twitter' => ''
-]
-                ])
+                @forelse($directors as $director)
+                    @include('components.elements.person-card', [
+                        'fullName' => $director->fullName,
+                        'position' => $director->position,
+                        'description' => $director->description,
+                        'quote' => $director->quote,
+                        'img' => $director->img,
+                        'socialNetworks' => [
+                            'linkedin' => $director->linkedin,
+                            'instagram' => '',
+                            'facebook' => '',
+                            'twitter' => ''
+                    ]
+                    ])
+                @empty
+                @endforelse
             </div>
         </section>
 
