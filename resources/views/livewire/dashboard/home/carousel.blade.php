@@ -30,7 +30,11 @@
                     <td>{{ $value->call_to_action }}</td>
                     <td>{{ $value->link }}</td>
                     <td><img src="{{ $value->cover }}" alt="{{ $value->title }}" width="100"></td>
-                    <td><img src="{{ $value->overlay_url }}" alt="{{ $value->title }}" width="100"></td>
+                    <td>
+                        @if($value->overlay_url)
+                            <img src="{{ $value->overlay_url }}" alt="{{ $value->title }}" width="100">
+                        @endif
+                    </td>
                     <td>{{ $value->overlay_caption }}</td>
                     <td>
                         <button type="button" data-bs-toggle="modal" data-bs-target="#updateModal" wire:click="edit({{ $value->id }})" class="btn btn-primary btn-sm">Editar</button>

@@ -48,12 +48,12 @@ class Carousel extends Component
         [
             'type' => 'text',
             'name' => 'overlay_url',
-            'label' => 'Overlay URL',
+            'label' => 'Imagem de sobreposição',
         ],
         [
             'type' => 'text',
             'name' => 'overlay_caption',
-            'label' => 'Overlay Caption',
+            'label' => 'Legenda da sobreposição',
         ],
     ];
     public $updateMode = false;
