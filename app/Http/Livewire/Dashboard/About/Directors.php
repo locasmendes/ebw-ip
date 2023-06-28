@@ -87,6 +87,7 @@ class Directors extends Component
     {
         $this->updateMode = true;
         $director = Director::where('id', $id)->first();
+        $this->director_id = $id;
         $this->fullName = $director->fullName;
         $this->position = $director->position;
         $this->description = $director->description;
