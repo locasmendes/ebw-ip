@@ -8,18 +8,20 @@
             @forelse($testimonials as $testimonial)
                     <div class="card testimonial-card">
                         <div class="profile">
-                            <div class="avatar w-50 mx-auto pb-2">
-                                <img class="img-fluid rounded-circle" src="{{$testimonial['profile_photo']}}" alt="">
-                            </div>
+                            @if(!$noPhoto)
+                                <div class="avatar w-50 mx-auto pb-2">
+                                    <img class="img-fluid rounded-circle" src="{{$testimonial->profile_photo}}" alt="">
+                                </div>
+                            @endif
                             <div class="name">
-                                <h5 class="mb-0 fw-bold">{{$testimonial['name']}}</h5>
-                                <h6 class="fw-bold text-ebw-golden">{{$testimonial['company']}}</h6>
+                                <h5 class="mb-0 fw-bold">{{$testimonial->name}}</h5>
+                                <h6 class="fw-bold text-ebw-golden">{{$testimonial->company}}</h6>
                             </div>
                         </div>
                         <div class="content">
                             <!--blockquote-->
                             <blockquote class="blockquote fst-italic">
-                                <p>"{{$testimonial['testimonial']}}"</p>
+                                <p>"{{$testimonial->testimonial}}"</p>
                             </blockquote>
                         </div>
                     </div>

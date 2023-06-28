@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Classes\Utils\Utils;
+use App\Models\HeroSlide;
 use App\Models\Page;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -11,8 +13,16 @@ class PageController extends Controller
     public function home()
     {
         $page = Page::where('slug', 'home')->first();
+        $heroSlides = HeroSlide::all();
+        $testimonials = Testimonial::all();
         $content = json_decode($page->content);
-        return view('home.index', ['content' => $content, $pageTitle = 'Home']);
+        return view('home.index',
+            [
+                'content' => $content,
+                'heroSlides' => $heroSlides,
+                'testimonials' => $testimonials,
+                ]
+        );
     }
 
     public function cadastrar(Request $request)

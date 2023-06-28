@@ -7,27 +7,27 @@
         </div>
         <div class="carousel-inner">
             @foreach($slides as $slide)
-                <div class="carousel-item slide {{$loop->first ? 'active' : ''}}" style="background: url({{asset('assets/png/slider/'.$slide['cover'])}});">
+                <div class="carousel-item slide {{$loop->first ? 'active' : ''}}" style="background: url({{$slide->cover}});">
                     <div class="slide-content w-100">
                         <div class="slide-heading w-md-50">
-                            <h1>{{$slide['title']}}</h1>
+                            <h1>{{$slide->title}}</h1>
                         </div>
 
-                        @if(array_key_exists('overlay', $slide))
+                        @if(!empty($slide->overlay_url && !empty($slide->overlay_caption)))
                             <div class="slide-overlay pe-4 pe-md-0 w-md-60">
                                 <figure class="figure">
-                                    <img src="{{asset('assets/png/slider/'.$slide['overlay']['url'])}}" class="figure-img img-fluid rounded" alt="...">
-                                    <figcaption class="figure-caption text-white text-center">{{$slide['overlay']['caption']}}</figcaption>
+                                    <img src="{{$slide->overlay_url}}" class="figure-img img-fluid rounded" alt="...">
+                                    <figcaption class="figure-caption text-white text-center">{{$slide->overlay_caption}}</figcaption>
                                 </figure>
                             </div>
                         @endif
 
                         <div class="slide-body w-md-30">
-                            <p>{{$slide['description']}}</p>
+                            <p>{{$slide->description}}</p>
                         </div>
 
                         <div class="slide-footer w-md-30">
-                            <a href="{{$slide['link']}}" class="btn border-ebw-golden text-white cta-btn">{{$slide['call_to_action']}} >>></a>
+                            <a href="{{$slide->link}}" class="btn border-ebw-golden text-white cta-btn">{{$slide->call_to_action}} >>></a>
                         </div>
                     </div>
                 </div>

@@ -28,7 +28,7 @@
     <div class="home-page">
         <div class="d-flex flex-column">
             <section class="hero-section">
-                <x-home.hero-slider :carousel="$content->carousel"/>
+                <x-home.hero-slider :carousel="$heroSlides"/>
             </section>
             <section class="transition-section pb-5 pe-3 pe-md-5 ps-3 ps-md-5 pt-7 bg-white text-black">
                 <div class="container text-center">
@@ -62,7 +62,7 @@
                 </div>
             </section>
             <section class="social-proof bg-white">
-                <x-home.testimonials-slider :testimonials="$content->depoimentos" />
+                <x-home.testimonials-slider :testimonials="$testimonials" :no-photo="true"/>
             </section>
             <section class="second-call bg-black text-white" id="home_page_second_call">
                 <div class="row g-0 justify-content-center wrapper py-5">

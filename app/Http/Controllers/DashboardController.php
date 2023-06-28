@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HeroSlide;
 use App\Models\Page;
+use App\Models\Testimonial;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\DB;
@@ -87,10 +89,19 @@ class DashboardController extends Controller
         $homePage->save();
         dd($homePage->content);*/
         $page = Page::where('slug', 'home')->first();
+        $heroSlides = HeroSlide::all();
+        $testimonials = Testimonial::all();
         $content = json_decode($page->content);
 
         $attributes = array_keys(get_object_vars($content));
-        return view('dashboard.pages.home', ['slug' => $page->slug, 'content' => $content, 'attributes' => $attributes]);
+        return view('dashboard.pages.home', [
+            'slug' => $page->slug,
+            'content' => $content,
+            'attributes' => $attributes,
+            'heroSlides' => $heroSlides,
+            'testimonials' => $testimonials
+        ]
+        );
     }
 
     public function saveHomePage(Request $request)
@@ -102,7 +113,17 @@ class DashboardController extends Controller
             $keys_start_with_slide = array_filter(array_keys($request->all()), function ($key) {
                 return strpos($key, 'slide') === 0;
             });
+            $keys_start_with_testimonial = array_filter(array_keys($request->all()), function ($key) {
+                return strpos($key, 'testimonial') === 0;
+            });
+            $testimonial_keys = [
+                'testimonial_company' => 'company',
+                'testimonial_name' => 'name',
+                'testimonial_profile_photo' => 'profile_photo',
+                'testimonial_testimonial' => 'testimonial'
+            ];
             $slides = [];
+            $testimonials = [];
             foreach ($keys_start_with_slide as $key) {
                 //transform the $key in the following structure example: slide-1-title => slide[0]['title'] = $request->input($key)
                 $elements = explode('_', $key);
@@ -118,17 +139,43 @@ class DashboardController extends Controller
                 $slides[$key]->call_to_action = $slides[$key]->call;
                 unset($slides[$key]->call);
             }
+            foreach ($keys_start_with_testimonial as $key) {
+                foreach ($testimonial_keys as $getter => $attribute){
+                    if (strpos($key, $getter) !== false){
+                        $elements = explode('_', $key);
+                        $last_element = end($elements);
+                        $testimonials[$last_element][$attribute] = $request->input($key);
+                    }
+                }
+            }
+            foreach ($testimonials as $key => $testimonial){
+                $testimonials[$key] = (object) $testimonial;
+            }
+            $res = [];
+            foreach ($testimonials as $testimonial){
+                $model = new Testimonial();
+                $model->name = $testimonial->name;
+                $model->company = $testimonial->company;
+                $model->profile_photo = $testimonial->profile_photo;
+                $model->testimonial = $testimonial->testimonial;
+                $model->save();
+                $res[] = $model->id;
+            }
+            dd($res);
 
             $content->carousel = $slides;
+            $content->depoimentos = $testimonials;
             $content->faixa1 = $request->input('faixa1');
             $content->faixa2 = new \stdClass();
             $content->faixa2->texto = $request->input('faixa2_texto');
             $content->faixa2->texto2 = $request->input('faixa2_texto2');
             $page->content = json_encode($content);
+            dd($content->depoimentos, $request->all());
             $page->save();
             return redirect()->route('dashboard.pages.home')->with('success', 'Página salva com sucesso!');
         } catch (\Exception $e) {
-            return redirect()->route('dashboard.pages.home')->with('error', 'Erro ao salvar página!');
+            //redirect with error and form data
+            return redirect()->route('dashboard.pages.home')->with('error', 'Erro ao salvar página!')->withInput();
         }
     }
 

@@ -13,6 +13,7 @@
     <!-- Scripts -->
     @vite('resources/js/app.js')
     @vite('resources/css/app.css')
+    @livewireStyles
 </head>
 <body class="" style="	-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;">
 <div class="main" style="min-height: 100vh; background-color: @yield('main-bg-color','#000000');">
@@ -64,5 +65,6 @@
         </div>
     </main>
 </div>
+@livewireScripts
 </body>
 </html>
