@@ -234,7 +234,12 @@ class DashboardController extends Controller
 
     public function editAboutPage()
     {
-        return view('dashboard.pages.about');
+        $directors = \App\Models\Director::all();
+        $page = Page::where('slug', 'about-us')->first();
+        $content = json_decode($page->content);
+        $content = get_object_vars($content);
+        $content['directors'] = $directors;
+        return view('dashboard.pages.about', $content);
     }
 
     public function saveAboutPage()

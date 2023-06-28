@@ -28,7 +28,11 @@ class PageController extends Controller
     public function about()
     {
         $directors = \App\Models\Director::all();
-        return view('sobre.index', ['directors' => $directors]);
+        $page = Page::where('slug', 'about-us')->first();
+        $content = json_decode($page->content);
+        $content = get_object_vars($content);
+        $content['directors'] = $directors;
+        return view('sobre.index', $content);
     }
 
     public function cadastrar(Request $request)

@@ -1,10 +1,10 @@
 @extends('layouts.main', ['pageTitle' => 'Sobre nós'])
 @section('main')
     <div class="about-page">
-        <header class="page-header" style="background: url({{url('assets/jpg/headers/aboutus.jpg')}});">
+        <header class="page-header" style="background: url({{$header->cover}});">
             <div class="wrapper">
                 <div class="container text-center text-white">
-                    <h1>Um pouco sobre nós</h1>
+                    <h1>{{$header->text}}</h1>
                 </div>
             </div>
         </header>
@@ -12,13 +12,13 @@
             <div class="row g-0 justify-content-center py-5">
                 <div class="col-8 col-md-5 d-flex flex-column justify-content-evenly">
                     <p class="fs-4 fw-light">
-                        O nosso principal objetivo é zelar pelo seu patrimônio, porque ele é o responsável pela realização dos seus sonhos e da sua família.
+                        {{$faixa1->main}}
                     </p>
                     <p class="fs-6 fw-lighter">
-                        A EBW Invest é Agente Autônomo de Investimentos credenciado à XP Investimentos. Ou seja, somos credenciados à maior corretora da América Latina há duas décadas.
+                        {{$faixa1->sub1}}
                     </p>
                     <p class="fs-6 fw-lighter">
-                        Estamos instalados no coração de São Paulo, uma região de fácil acesso, em um escritório pronto para receber nossos clientes, quando necessário
+                        {{$faixa1->sub2}}
                     </p>
                 </div>
                 <div class="d-none d-md-block col-8 col-md-5 gap-4 photo-wrapper">
@@ -31,26 +31,26 @@
                         </div>
                     </div>
                     <div>
-                        <a href="{{route('cadastro')}}" class="btn border-ebw-golden cta-btn">Conheça nossa equipe >>></a>
+                        <a href="{{route('cadastro')}}" class="btn border-ebw-golden cta-btn">{{$faixa1->call_to_action}} >>></a>
                     </div>
                 </div>
             </div>
         </section>
         <section class=" bg-ebw-dark text-white d-flex flex-column about-pillars">
             <div class="wrapper p-md-5">
-                <h2 class="fw-bold px-md-9 py-6 text-center">Nossa assessoria integrativa é baseado em três pilares:</h2>
+                <h2 class="fw-bold px-md-9 py-6 text-center">{{$faixa2->main}}</h2>
                 <div class="row gap-4 px-md-9">
                     <div class="col">
                         <div class="d-flex flex-row flex-nowrap align-content-center gap-1 py-3 justify-content-start align-items-end">
                             <img role="img" src="{{ asset('assets/svg/tick-outline.svg') }}">
 
                             <h4 class="fw-bold text-uppercase m-0">
-                                Responsabilidade
+                                {{$faixa2->title_one}}
                             </h4>
                         </div>
 
                         <p class="fw-lighter">
-                            Temos o compromisso de, juntos, buscarmos as melhores opções de investimento para você e sua empresa, sempre levando em conta o seu perfil de investimento com foco nos seus objetivos a curto, médio e longo prazo.
+                            {{$faixa2->text_one}}
                         </p>
                     </div>
                     <div class="col">
@@ -58,23 +58,23 @@
                             <img role="img" src="{{ asset('assets/svg/tick-outline.svg') }}">
 
                             <h4 class="fw-bold text-uppercase m-0">
-                                Transparência
+                                {{$faixa2->title_two}}
                             </h4>
                         </div>
 
                         <p class="fw-lighter">
-                            Nossos profissionais atuam há mais de três décadas no mercado financeiro garantindo o acompanhamento necessário e o repasse de todas as informações importantes. Enquanto a gente se preocupa em fazer o seu futuro acontecer, você aproveita a vida.
+                            {{$faixa2->text_two}}
                         </p>
                     </div>
                     <div class="col">
                         <div class="d-flex flex-row flex-nowrap align-content-center gap-1 py-3 justify-content-start align-items-end">
                             <img role="img" src="{{ asset('assets/svg/tick-outline.svg') }}">
                             <h4 class="fw-bold text-uppercase m-0">
-                                Relacionamento
+                                {{$faixa2->title_three}}
                             </h4>
                         </div>
                         <p class="fw-lighter">
-                            Seja pelo canal digital ou presencial, manter um atendimento humanizado e personalizado, para nós, é uma questão primordial.
+                            {{$faixa2->text_three}}
                         </p>
                     </div>
                 </div>
@@ -85,21 +85,22 @@
                 <div class="spec py-2 py-md-5 px-0 px-md-9">
                     <div class="content">
                         <p>
-                            Nossa <strong>Missão</strong> é apoiar o investidor e zelar pelo seu patrimônio
+                            {!! $faixa3->mission !!}
                         </p>
                     </div>
                 </div>
                 <div class="spec py-2 py-md-5 px-0 px-md-9">
                     <div class="content">
                         <p>
-                            <strong>Visão</strong> sólida de olhar para o futuro e antecipá-lo com soluções que superem suas metas financeiras.
+                            {!! $faixa3->vision !!}
                         </p>
                     </div>
                 </div>
                 <div class="spec py-2 py-md-5 px-0 px-md-9">
                     <div class="content">
                         <p>
-                            Acreditamos na excelência de dentro para fora. E, por isso, nossos <strong>valores</strong> e a relação com nossos investidores é regida pela <strong>ética</strong> e <strong>transparência</strong>. Estamos atentos às necessidades e não medimos esforços para o sucesso em conjunto.                        </p>
+                            {!! $faixa3->values !!}
+                        </p>
                     </div>
                 </div>
             </div>
