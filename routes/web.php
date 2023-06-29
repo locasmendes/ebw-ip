@@ -35,6 +35,8 @@ Route::get('trabalhe-conosco', function () {
     return view('talents.index');
 })->name('trabalhe-conosco');
 
+Route::post('trabalhe-conosco', [\App\Http\Controllers\PageController::class, 'registerResume'])->name('trabalhe-conosco.save');
+
 Route::get('/debug', function () {
     return view('debug');
 })->name('debug');

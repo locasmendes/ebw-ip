@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Classes\Utils\Utils;
+use App\Models\Application;
 use App\Models\HeroSlide;
 use App\Models\Page;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class PageController extends Controller
 {
@@ -77,5 +79,40 @@ class PageController extends Controller
         $response = json_decode($response->getBody()->getContents());
 
         return redirect()->route('cadastro')->with('success', 'Seu cadastro foi realizado com sucesso!');
+    }
+
+    public function registerResume(Request $request)
+    {
+        try {
+            $resume = new Application();
+            $resume->fullName = $request->fullName;
+            $resume->email = $request->email;
+            $resume->mobile = $request->phone;
+            $resume->city = $request->city;
+            $resume->state = $request->state;
+            $resume->hasAncord = (bool)$request->ancord;
+            $resume->linkedin = $request->linkedin;
+            $file = $request->file('cv');
+            $resumeUrl = $this->uploadResumeAndGetUrl($file);
+            $resume->resumeUrl = $resumeUrl;
+            $resume->save();
+            return redirect()->route('trabalhe-conosco')->with('message', 'Seu currículo foi enviado com sucesso!');
+        } catch (\Throwable $th) {
+            return redirect()->route('trabalhe-conosco')->with('message', 'Ocorreu um erro ao enviar seu currículo!');
+        }
+ }
+
+    public function uploadResumeAndGetUrl($file)
+    {
+        try {
+            $fileName = $file->getClientOriginalName();
+            //sanitize file name
+            $fileName = str_replace(' ', '_', $fileName);
+            $file->storeAs('public/resumes', $fileName);
+            $resumeUrl = Storage::url("public/resumes/{$fileName}");
+            return $resumeUrl;
+        } catch (\Throwable $th) {
+            return null;
+        }
     }
 }
