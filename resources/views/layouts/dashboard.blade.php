@@ -40,7 +40,7 @@
                                             <li><a href="{{route('dashboard.pages.about')}}" class="link-dark rounded" disabled>Sobre nós</a></li>
                                             <li><a href="#" class="link-dark rounded" disabled>Pra você</a></li>
                                             <li><a href="{{ route('dashboard.pages.faq') }}" class="link-dark rounded">Ajuda</a></li>
-                                            <li><a href="#" class="link-dark rounded" disabled>Trabalhe conosco</a></li>
+                                            <li><a href="{{route('dashboard.pages.applications')}}" class="link-dark rounded">Trabalhe conosco</a></li>
                                         </ul>
                                     </div>
                                 </li>

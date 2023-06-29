@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Application;
 use App\Models\Director;
 use App\Models\HeroSlide;
 use App\Models\Page;
@@ -245,5 +246,11 @@ class DashboardController extends Controller
     public function saveAboutPage()
     {
         dd('saveAboutPage');
+    }
+
+    public function applicationsPage()
+    {
+        $applications = Application::all();
+        return view('dashboard.pages.applications', ['applications' => $applications]);
     }
 }
